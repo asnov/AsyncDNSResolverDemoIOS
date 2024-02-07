@@ -11,6 +11,8 @@
 		A767FC5D2B73C6D1000536ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A767FC5C2B73C6D1000536ED /* ContentView.swift */; };
 		A767FC5F2B73C6D3000536ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A767FC5E2B73C6D3000536ED /* Assets.xcassets */; };
 		A767FC622B73C6D3000536ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A767FC612B73C6D3000536ED /* Preview Assets.xcassets */; };
+		A767FC692B73C780000536ED /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A767FC682B73C780000536ED /* Resolver.swift */; };
+		A767FC6C2B73C912000536ED /* AsyncDNSResolver in Frameworks */ = {isa = PBXBuildFile; productRef = A767FC6B2B73C912000536ED /* AsyncDNSResolver */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,7 @@
 		A767FC5C2B73C6D1000536ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A767FC5E2B73C6D3000536ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A767FC612B73C6D3000536ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A767FC682B73C780000536ED /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A767FC6C2B73C912000536ED /* AsyncDNSResolver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +57,7 @@
 			children = (
 				A767FC5A2B73C6D1000536ED /* AsyncDNSResolverDemoIOSApp.swift */,
 				A767FC5C2B73C6D1000536ED /* ContentView.swift */,
+				A767FC682B73C780000536ED /* Resolver.swift */,
 				A767FC5E2B73C6D3000536ED /* Assets.xcassets */,
 				A767FC602B73C6D3000536ED /* Preview Content */,
 			);
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = AsyncDNSResolverDemoIOS;
+			packageProductDependencies = (
+				A767FC6B2B73C912000536ED /* AsyncDNSResolver */,
+			);
 			productName = AsyncDNSResolverDemoIOS;
 			productReference = A767FC572B73C6D1000536ED /* AsyncDNSResolverDemoIOS.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = A767FC4E2B73C6D1000536ED;
+			packageReferences = (
+				A767FC6A2B73C912000536ED /* XCRemoteSwiftPackageReference "swift-async-dns-resolver" */,
+			);
 			productRefGroup = A767FC582B73C6D1000536ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A767FC692B73C780000536ED /* Resolver.swift in Sources */,
 				A767FC5D2B73C6D1000536ED /* ContentView.swift in Sources */,
 				A767FC5B2B73C6D1000536ED /* AsyncDNSResolverDemoIOSApp.swift in Sources */,
 			);
@@ -344,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A767FC6A2B73C912000536ED /* XCRemoteSwiftPackageReference "swift-async-dns-resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-async-dns-resolver";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A767FC6B2B73C912000536ED /* AsyncDNSResolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A767FC6A2B73C912000536ED /* XCRemoteSwiftPackageReference "swift-async-dns-resolver" */;
+			productName = AsyncDNSResolver;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A767FC4F2B73C6D1000536ED /* Project object */;
 }
